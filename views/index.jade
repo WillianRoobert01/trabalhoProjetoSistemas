@@ -1,0 +1,45 @@
+extends layout
+
+block content
+    h1= title
+    
+    // Wrapper
+    #wrapper
+
+        // USER INFO
+        #userInfo
+            h2 Informação
+            p
+                strong Nome:
+                |  <span id='userInfoName'></span>
+                br
+               strong Telefone:
+                |  <span id='userInfoTelefone'></span>
+                br
+               strong Contribuição:
+                |  <span id='userInfoContribuicao'></span>	
+        // /USER INFO
+
+        // USER LIST
+        h2 Lista de convidados
+        #userList
+            table
+                thead
+                    <th> Nome </th><th> Telefone </th><th> Contribuição </th><th> Delete? </th>
+                    
+                tbody
+        // /USER LIST
+
+        // ADD USER
+        h2 Inserir um convidado
+        #addUser
+            fieldset
+                input#inputUserName(type='text', placeholder='Nome')
+                input#inputUserTelefone(type='text', placeholder='Telefone')
+                <br>
+                input#inputUserContribuicao(type='text', placeholder='Contribuição')
+                <br>
+                button#btnAddUser Insere 
+        // /ADD USER
+
+    // /WRAPPER
